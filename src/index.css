@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+:root{
+  --primary-text:#0f172a,
+  --secondary-text:#64748b
+}
+.logo{
+  height: 3rem;
+  width: 3rem;
+  background: linear-gradient(to bottom right, #6366F1, #9333EA);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.logo h1{
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+.nav-item{
+  color: #6366F1;
+  background-color: #EEF2FF;
+}
+.lnav-icon{
+  padding: 1rem;
+  border-radius: 15px;
+  font:bold;
+}
+.bell{
+  position: relative;
+}
+.bell::before {
+  content: '';
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  border-radius: 50%;
+}
+
