@@ -9,6 +9,7 @@ import Calender from './Pages/Calender'
 import LeftNav from './Components/Nav/Leftnav/LeftNav'
 import TopNav from './Components/Nav/TopNav/TopNav'
 import { NavToggleContext } from './Contexts/NavToggle'
+import Grade from './Pages/Grade'
 const App = () => {
   let {navActive,setNavActive}=useContext(NavToggleContext)
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path='/course' element={<Course/> }/>
         <Route path='/task' element={<Task/> }/>
         <Route path='/calender' element={<Calender/> }/>
+          <Route path='/grade' element={<Grade/> }/>
         <Route path='*' element={<Navigate to="/dashboard" />} />
         
       </Routes>

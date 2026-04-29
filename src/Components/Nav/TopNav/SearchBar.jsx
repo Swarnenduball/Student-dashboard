@@ -6,7 +6,7 @@ import { NavToggleContext } from '../../../Contexts/NavToggle'
 const SearchBar = () => {
      const [input, setinput] = useState('')
      let {navActive,setNavActive}=useContext(NavToggleContext)
-     console.log(navActive,setNavActive)
+    
   return (
     <div className=' w-full lg:w-1/2 flex items-center gap-3'>
       <Menu className=' lg:hidden' onClick={()=>{

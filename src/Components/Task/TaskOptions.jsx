@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
+import TaskList from './TaskList'
+import  { taskActiveContext } from './TaskActiveProvider'
 
 const TaskOptions = () => {
-    const [active, setactive] = useState('active')
+  
+   const {active,setactive}=useContext(taskActiveContext)
     const tabs=['all','active','complete']
+
+    
   return (
+     
     <div className='flex w-fit gap-2 justify-between bg-white rounded border border-slate-50 p-2'>
+       
        {tabs.map((tab)=>
       <button 
        key={tab}
@@ -13,8 +20,11 @@ const TaskOptions = () => {
          ${active===tab?'bg-indigo-600 text-white rounded border':''}
         `}>{tab}</button>  
     )}
+   
+    
 
     </div>
+   
   )
 }
 

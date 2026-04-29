@@ -31,7 +31,26 @@ const TaskBottom = () => {
   return (
     <div>
         {tasks.map(({task,course,time,priority})=>{
-            const color=priority=='High'?'#F87171':priority=='Medium'?'#FBBF24':'#60A5FA'
+                 const bgColor =
+  priority === 'High'
+    ? '#FEE2E2'
+    : priority === 'Medium'
+    ? '	#FEF3C7'
+    : '#DBEAFE';
+
+const textColor =
+  priority === 'High'
+    ? '#b91c1c'
+    : priority === 'Medium'
+    ? '#A16207'
+    : '#B91C1C';
+
+const borderColor =
+  priority === 'High'
+    ? '#FECACA'
+    : priority === 'Medium'
+    ? '#FDE68A'
+    : '#BFDBFE';
           return (<div className='flex gap-5 mt-5 bg-white p-5 rounded-3xl duration-300 cursor-pointer transition-all hover:shadow-sm hover:translate-y-1 hover:shadow-black/30'>  
             <div>
               <input  className='size-6 transition-all duration-1000' type="checkbox" name="" id="" /></div>
@@ -42,7 +61,7 @@ const TaskBottom = () => {
                 <div className='flex gap-2'>
                   <p className='flex text-[primary] opacity-60'>
                   <Clock/>  {time}</p>
-                <div style={{background:color,text:color}} className='w-max flex rounded-4xl px-3 py-1  '><Flag />{priority}</div></div>
+                <div style={{background:bgColor,text:textColor,borderColor:borderColor}} className='w-max flex rounded-4xl px-3 py-1  '><Flag />{priority}</div></div>
                 
                 
               </div>
