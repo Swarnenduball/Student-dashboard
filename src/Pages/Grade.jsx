@@ -1,8 +1,11 @@
 import React from 'react'
+import GradeMain from '../Components/Grade/GradeMain'
 
 const Grade = () => {
   return (
-    <div>Grade</div>
+    <div>
+      <GradeMain/>
+    </div>
   )
 }
 
